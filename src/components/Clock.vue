@@ -15,17 +15,23 @@ import { Vue, Component } from 'vue-property-decorator'
 
 @Component
 export default class Clock extends Vue {
-  get hours (): number {
-    return new Date().getHours()
+  mounted () {
+    this.handler = window.setInterval(() => {
+      let now = new Date();
+    })
+
+  }
+  beforeDestroy () {
+    window.clearTimeout();
   }
 
-  get minutes (): number {
-    return new Date().getMinutes()
-  }
+  handler: any
 
-  get seconds (): number {
-    return new Date().getSeconds()
-  }
+  hours: number = 0
+
+  minutes: number = 0
+
+  seconds: number = 0
 }
 
 </script>
