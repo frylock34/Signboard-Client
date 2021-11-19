@@ -8,7 +8,7 @@
     <v-main>
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
-        <Clock />
+        <hello-world />
       </v-container>
     </v-main>
 
@@ -21,10 +21,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Clock from '@/components/Clock.vue';
+import { HelloWorld } from "@frylock34/hello-world"
 
 @Component({
   components: {
-    Clock
+    HelloWorld
   }
 })
 export default class App extends Vue { }
